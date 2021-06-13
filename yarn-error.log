@@ -1,0 +1,55 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add --dev @types/react @types/nodes
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\laragon\bin\php\php-7.4.12-Win32-vc15-x64;C:\composer;C:\Program Files\PuTTY\;C:\Program Files\Theme Kit;C:\Program Files (x86)\Yarn\bin\;C:\Users\bboyx\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Users\bboyx\scoop\apps\oh-my-posh\current\bin;C:\Users\bboyx\scoop\shims;C:\Users\bboyx\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\bboyx\AppData\Local\Programs\Python\Python39\;C:\laragon\bin;C:\laragon\bin\apache\httpd-2.4.35-win64-VC15\bin;C:\laragon\bin\composer;C:\laragon\bin\git\bin;C:\laragon\bin\git\cmd;C:\laragon\bin\git\mingw64\bin;C:\laragon\bin\git\usr\bin;C:\laragon\bin\laragon\utils;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\laragon\bin\nginx\nginx-1.16.0;C:\laragon\bin\ngrok;C:\laragon\bin\notepad++;C:\laragon\bin\putty;C:\laragon\bin\redis\redis-x64-3.2.100;C:\laragon\bin\telnet;C:\laragon\usr\bin;C:\Users\bboyx\AppData\Local\Yarn\config\global\node_modules\.bin;C:\Users\bboyx\AppData\Roaming\Composer\vendor\bin;C:\Users\bboyx\AppData\Roaming\npm;C:\Users\bboyx\AppData\Local\Microsoft\WindowsApps;C:\Users\bboyx\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bboyx\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Program Files\heroku\bin;C:\Users\bboyx\AppData\Local\GitHubDesktop\bin;C:\Users\bboyx\AppData\Local\Yarn\bin;C:\Users\bboyx\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\JetBrains\PhpStorm 2020.3.2\bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@types%2fnodes: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66097:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140749:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141721:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141643:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "client",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "react": "^17.0.0",
+      "react-dom": "^17.0.0"
+    },
+    "devDependencies": {
+      "@types/react": "^17.0.0",
+      "@types/react-dom": "^17.0.0",
+      "@vitejs/plugin-react-refresh": "^1.3.1",
+      "typescript": "^4.1.2",
+      "vite": "^2.3.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

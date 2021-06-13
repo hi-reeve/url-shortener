@@ -1,0 +1,24 @@
+.nav {
+    @apply lg:px-40  px-6 md:pt-4 pt-10 pb-6 flex z-10 items-center relative w-full;
+    &__toggle {
+        @apply w-6 h-6 flex flex-col justify-around cursor-pointer ml-auto md:hidden;
+        div {
+            @apply h-[3px] w-full bg-violet-grayish rounded-full;
+        }
+    }
+    &__menu {
+        @apply md:w-full w-[90vw] flex md:flex-row flex-col md:static absolute top-full left-1/2 transform md:translate-x-0 translate-x-[-50%] md:bg-transparent bg-violet-dark  font-bold rounded-[10px] text-center px-6 items-center;
+        &-left {
+            @apply md:mr-auto py-4 md:border-none border-b border-violet-grayish flex md:flex-row flex-col items-center;
+        }
+		&-right {
+			@apply md:ml-auto md:pt-4 md:pb-4 pt-2 pb-8 flex md:flex-row flex-col items-center;
+		}
+    }
+    &__link {
+        @apply px-4 py-4 md:text-violet-grayish md:hover:text-violet-very-dark text-white cursor-pointer transition-all duration-300 ease-in-out select-none; 
+		&--signup{
+			@apply bg-custom-cyan md:px-4 px-8 py-2 md:mt-0 mt-2 w-full rounded-full text-white hover:opacity-70 hover:text-white;
+		}
+    }
+}
