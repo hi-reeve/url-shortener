@@ -1,0 +1,23 @@
+.url-form {
+    background-position: right !important;
+    background: url("../assets/images/bg-shorten-mobile.svg"),
+        var(--dark-violet);
+    background-repeat: no-repeat;
+    @apply md:px-16 md:py-10 py-6 px-6 rounded grid place-items-center -mt-20;
+
+    @media screen and (min-width: 769px) {
+        background: url("../assets/images/bg-shorten-desktop.svg"),
+            var(--dark-violet);
+        background-position: left !important;
+        background-size: 100%;
+    }
+    &__input {
+        @apply rounded w-full flex-1 md:min-h-[64px] px-4 focus:outline-none;
+		&:disabled{
+			@apply bg-gray-300 text-white cursor-not-allowed;
+		}
+    }
+    &__form {
+        @apply flex md:flex-row flex-col  w-full;
+    }
+}

@@ -12,6 +12,7 @@
         --red: hsl(0, 87%, 67%);
         --gray: hsl(0, 0%, 75%);
         --very-dark-blue: hsl(255, 11%, 22%);
+        --grayish-violet-light: hsl(225, 32%, 95%);
     }
 
     body {

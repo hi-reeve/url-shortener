@@ -10,6 +10,7 @@ module.exports = {
             colors: {
                 violet: {
                     grayish: "var(--grayish-violet)",
+                    "grayish-light": "var(--grayish-violet-light)",
                     dark: "var(--dark-violet)",
                     "very-dark": "var(--very-dark-violet)",
                 },
@@ -25,6 +26,12 @@ module.exports = {
                 "custom-blue": {
                     "very-dark": "var(--very-dark-blue)",
                 },
+            },
+            backgroundImage: {
+                "shorten-desktop":
+                    "url('/src/assets/images/bg-shorten-desktop.svg')",
+                "shorten-mobile":
+                    "url('/src/assets/images/bg-shorten-mobile.svg')",
             },
         },
     },
