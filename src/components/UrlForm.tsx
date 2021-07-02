@@ -62,9 +62,9 @@ const UrlForm: React.FC<Props> = ({}) => {
                 appContext.SET_STATE(formedData);
 
                 setLink("");
-            }
+            } 
         } catch (error) {
-            setError(error);
+            setError('There is something wrong... please try again!');
         } finally {
             setLoading(false);
         }
@@ -77,8 +77,8 @@ const UrlForm: React.FC<Props> = ({}) => {
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                             if (error) setError("");
                             setLink(e.target.value);
-						}}
-						disabled={loading}
+                        }}
+                        disabled={loading}
                         value={link}
                         type="text"
                         className={`${style["url-form__input"]} ${

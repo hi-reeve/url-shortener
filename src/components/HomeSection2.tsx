@@ -3,72 +3,57 @@ import style from "@/components/HomeSection2.module.scss";
 import UrlForm from "@/components/UrlForm";
 import { useContext } from "react";
 import { AppContext } from "@/store/AppContext";
-import Button from "@/components/Button";
-import { useState } from "react";
+import LinkList from "./LinkList";
+import Statistic from "./Statistic";
+import type { Statistic as TStatistic } from "@/types/Statistic";
+import StatisticCard from "./StatisticCard";
+import { nanoid } from "nanoid";
+import IconBrandRecognition from "@/assets/images/icon-brand-recognition.svg";
+import IconDetailedRecords from "@/assets/images/icon-detailed-records.svg";
+import IconFullyCustomizable from "@/assets/images/icon-fully-customizable.svg";
 const HomeSection2 = () => {
     const appContext = useContext(AppContext);
 
-    const [copiedId, setCopiedId] = useState<string | null>(null);
-    const [isCopied, setIsCopied] = useState<boolean>(false);
-    const copyToClipboard = (id: string) => {
-        const copiedUrl = appContext.shortenUrl.find(url => url.id === id);
-        if (copiedUrl) {
-            navigator.clipboard
-                .writeText(copiedUrl.fullShortenUrl)
-                .then(() => {
-                    setCopiedId(id);
-                    setIsCopied(true);
-                    setTimeout(() => {
-                        setCopiedId(null);
-                        setIsCopied(false);
-                    }, 2000);
-                })
-                .catch(err =>
-                    alert("there is an error while copied the link, " + err)
-                );
-        }
-    };
+    const statistic: TStatistic[] = [
+        {
+            id: nanoid(),
+            title: "Brand Recognition",
+            description:
+                "Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.",
+            icon: IconBrandRecognition,
+        },
+        {
+            id: nanoid(),
+            title: "Detailed Records",
+            description:
+                "Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.",
+            icon: IconDetailedRecords,
+        },
+        {
+            id: nanoid(),
+            title: "Fully Customizable",
+            description:
+                "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.",
+            icon: IconFullyCustomizable,
+        },
+    ];
     return (
         <div className={style.section__2}>
             <UrlForm />
             {appContext.shortenUrl.length > 0 && (
-                <ul className="mt-5">
+                <div className={style.link__wrapper}>
                     {appContext.shortenUrl.map(url => (
-                        <li
-                            key={url.id}
-                            className="flex md:flex-row flex-col rounded  bg-white  my-2 md:items-center"
-                        >
-                            <div
-                                className="p-4 max-w-[100%] truncate "
-                                title={url.originalUrl}
-                            >
-                                {url.originalUrl}
-                            </div>
-                            <div className="h-[1px] md:hidden block bg-custom-gray w-full"></div>
-                            <div className="p-4 md:ml-auto">
-                                <span className="text-custom-cyan ">
-                                    {url.shortenUrl}
-                                </span>
-                                <Button
-                                    isRounded={false}
-                                    className={`md:ml-3 md:mt-0 mt-5 md:w-auto w-full ${
-                                        isCopied && copiedId === url.id
-                                            ? "!bg-violet-dark"
-                                            : ""
-                                    }`}
-                                    onClick={() => {
-                                        copyToClipboard(url.id);
-                                    }}
-                                >
-                                    {isCopied && copiedId === url.id
-                                        ? "Copied!"
-                                        : "Copy"}
-                                </Button>
-                            </div>
-                        </li>
+                        <LinkList url={url} key={url.id} />
                     ))}
-                </ul>
+                </div>
             )}
+
+            <Statistic />
+            <div className={style["statistic-card-wrapper"]}>
+                {statistic.map(stats => (
+                    <StatisticCard statistic={stats} key={stats.id} />
+                ))}
+            </div>
         </div>
     );
 };

@@ -1,3 +1,13 @@
 .section__2 {
     @apply lg:px-40 px-6 mt-[88px] w-full bg-violet-grayish-light py-8;
 }
+.link__wrapper {
+    @apply mt-5;
+}
+.statistic-card-wrapper {
+    @apply flex lg:flex-row flex-col items-start my-20 relative;
+    &::before {
+        content: "";
+        @apply absolute bg-custom-cyan lg:w-full lg:top-1/2 lg:left-0 lg:h-2 w-2 h-full left-1/2 top-0 lg:translate-x-0 lg:-translate-y-1/2 -translate-x-1/2 translate-y-0;
+    }
+}

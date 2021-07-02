@@ -13,7 +13,7 @@ const Hero = () => {
                     Build your brand’s recognition and get detailed insights on
                     how your links are performing.
                 </p>
-                <Button>Get Started</Button>
+				<Button isRounded>Get Started</Button>
             </div>
             <div className={style.hero__right}>
                 <img src={IllustrationWorking} />

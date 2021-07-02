@@ -1,0 +1,18 @@
+.links{
+	@apply flex md:flex-row flex-col rounded  bg-white  my-2 md:items-center;
+	&__original-url{
+		@apply p-4 max-w-[100%] truncate;
+	}
+	&__divider{
+		@apply h-[1px] md:hidden block bg-custom-gray w-full;
+	}
+	&__cta-wrapper{
+		@apply p-4 md:ml-auto;
+	}
+	&__shorten-url{
+		@apply text-custom-cyan;
+	}
+	&__copy-cta{
+		@apply md:ml-3 md:mt-0 mt-5 md:w-auto w-full;
+	}
+}

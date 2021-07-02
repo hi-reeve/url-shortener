@@ -1,0 +1,9 @@
+.statistic{
+	@apply mt-20;
+	&__section-title{
+		@apply font-bold text-center md:text-4xl text-2xl;
+	}
+	&__section-desc{
+		@apply text-center md:w-1/2 mx-auto mt-5 text-violet-grayish;
+	}
+}
