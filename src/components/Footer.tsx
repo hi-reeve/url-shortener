@@ -29,10 +29,10 @@ const Footer = () => {
 				<span className={style['footer__link'] }>Contact</span>
 			</div>
 			<div className={style['footer__link-socmed']}>
-				<img src={FacebookIcon} className={style['footer__link-socmed--icon'] } />
-				<img src={TwitterIcon} className={style['footer__link-socmed--icon'] } />
-				<img src={PinterestIcon} className={style['footer__link-socmed--icon'] } />
-				<img src={InstagramIcon} className={style['footer__link-socmed--icon'] } />
+				<img alt="Facebook icon" src={FacebookIcon} className={style['footer__link-socmed--icon'] } />
+				<img alt="Twitter icon" src={TwitterIcon} className={style['footer__link-socmed--icon'] } />
+				<img alt="Pinterest icon" src={PinterestIcon} className={style['footer__link-socmed--icon'] } />
+				<img alt="Instagram icon" src={InstagramIcon} className={style['footer__link-socmed--icon'] } />
 			</div>
 		</div>
 	)

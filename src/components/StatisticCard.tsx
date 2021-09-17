@@ -8,7 +8,8 @@ const StatisticCard: React.FC<Props> = ({ statistic }) => {
     return (
         <div className={style["statistic-card"]}>
             <div className={style["statistic-card__icon-wrapper"]}>
-                <img
+				<img
+					alt="Statistic card icon"
                     src={statistic.icon}
                     className={style["statistic-card__icon"]}
                 />

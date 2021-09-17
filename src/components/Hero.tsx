@@ -16,7 +16,7 @@ const Hero = () => {
 				<Button isRounded>Get Started</Button>
             </div>
             <div className={style.hero__right}>
-                <img src={IllustrationWorking} />
+                <img alt="Working Illustration" src={IllustrationWorking} />
             </div>
         </div>
     );

@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <nav className={style.nav}>
             <div>
-                <img src={Logo} />
+                <img alt="logo" src={Logo} />
             </div>
             <div
                 className={style.nav__toggle}
