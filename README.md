@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/url-shortening-with-react-and-tailwindcss-9d5HFwFp3)
 - Live Site URL: [Live Demo](https://url-shortening-roan.vercel.app)
 
 
