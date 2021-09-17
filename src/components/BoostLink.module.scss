@@ -1,0 +1,6 @@
+.boost-link{
+	@apply w-full lg:bg-boost-desktop bg-cover bg-boost-mobile flex flex-col bg-violet-dark bg-no-repeat h-[250px] justify-center items-center;
+	&__title{
+		@apply text-3xl text-white mb-5 font-bold text-center;
+	}
+}
